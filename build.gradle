@@ -1,0 +1,21 @@
+plugins {
+	id 'org.springframework.boot' version '3.0.0' // Adjust version as needed
+	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
+	id 'java'
+}
+
+group = 'com.example' // Change to your package name
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '17' // Adjust based on your JDK version
+
+repositories {
+	mavenCentral()
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-websocket'
+	implementation 'org.springframework.boot:spring-boot-starter'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// Additional configurations, tasks, etc.
