@@ -6,7 +6,10 @@ plugins {
 
 group = 'com.example' // Change to your package name
 version = '0.0.1-SNAPSHOT'
-sourceCompatibility = '17' // Adjust based on your JDK version
+// Set the source and target compatibility to Java 17
+sourceCompatibility = '17'
+targetCompatibility = '17'
+
 
 repositories {
 	mavenCentral()
@@ -16,6 +19,13 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-websocket'
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+}
+
+// Use the Java 17 toolchain
+java {
+	toolchain {
+		languageVersion = JavaLanguageVersion.of(17)
+	}
 }
 
 // Additional configurations, tasks, etc.
